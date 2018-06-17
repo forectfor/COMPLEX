@@ -80,3 +80,40 @@ Complex Complex::operator=(const Complex& other){
 bool Complex::operator==(const Complex& other){
     return (Re == other.Re && Im == other.Im);
 }
+template <class CharT, class Traits>
+
+basic_ostream<CharT, Traits>& operator<<(basic_ostream<CharT, Traits>& os, const Complex& other) {
+
+	if (other.Im < 0)
+
+	{
+
+		os << other.Re << other.Im << "i" << std::endl;
+
+	}
+
+	else
+
+	{
+
+		os << other.Re << "+" << other.Im << "i" << std::endl;
+
+	}
+
+	return os;
+
+}
+
+
+
+template <class CharT, class Traits>
+
+basic_istream<CharT, Traits>& operator>>(basic_istream<CharT, Traits>& is, Complex& other) {
+
+	cout << "Введите дeйcтвительную и мнимую части числа: ";
+
+	is >> other.Re >> other.Im;
+
+	return is;
+
+};
