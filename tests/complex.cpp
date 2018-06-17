@@ -8,86 +8,86 @@ SCENARIO("complex new without param","[new without param]"){
 }
 
 SCENARIO("complex new with pram","[new with param]"){
-    Complex complex(2,-3);
+    Complex complex(2, 2);
     REQUIRE(complex.real() == 2);
-    REQUIRE(complex.imaginary() == -3);
+    REQUIRE(complex.imaginary() == 2);
 }
 
 SCENARIO("complex copy","[copy]"){
-    Complex complex1(2,-3);
+    Complex complex1(2, 2);
     Complex complex2(complex1);
     REQUIRE(complex2.real() == 2);
-    REQUIRE(complex2.imaginary() == -3);
+    REQUIRE(complex2.imaginary() == 2);
 }
 
 SCENARIO("complex sum","[sum]"){
-    Complex complex1(2,-3), complex2(4,2), complex3(6,-1);
+    Complex complex1(2, 2), complex2(3, 3), complex3(5, 5);
     REQUIRE((complex1.add(complex2) == complex3) == true);
 }
 
 SCENARIO("complex sub","[sub]"){
-    Complex complex1(2,-3), complex2(4,2), complex3(-2,-5);
+    Complex complex1(3, 3), complex2(2, 2), complex3(1, 1);
     REQUIRE((complex1.sub(complex2) == complex3) == true);
 }
 
 SCENARIO("complex mul ", "[mul]") {
-    Complex complex1(2, -3), complex2;
+    Complex complex1(2, 2), complex2;
     int numbers = 2;
     complex2 = complex1.mul(numbers);
     REQUIRE(complex2.real() == 4);
-    REQUIRE(complex2.imaginary() == -6);
+    REQUIRE(complex2.imaginary() == 4);
 }
 
 SCENARIO("complex div", "[div]") {
-    Complex complex1(2, -3), complex2;
+    Complex complex1(4, 4), complex2;
     int numbers = 2;
     complex2 = complex1.div(numbers);
-    REQUIRE(complex2.real() == 1);
-    REQUIRE(complex2.imaginary() == -1.5);
+    REQUIRE(complex2.real() == 2);
+    REQUIRE(complex2.imaginary() == 2);
 }
 
 SCENARIO("complex operator*","[oper*]"){
-    Complex complex1(2,-3), complex2(4,2), complex3(14,-8);
+    Complex complex1(1, 2), complex2(3, 4), complex3(-5, 10);
     REQUIRE((complex1*complex2 == complex3) == true);
 }
 
 SCENARIO("complex operator/","[oper/]"){
-    Complex complex1(-23,2), complex2(4,2), complex3(-4.4,2.7);
+    Complex complex1(1, 2), complex2(3, 4), complex3(0.44, 0.08);
     REQUIRE((complex1/complex2 == complex3) == true);
 }
 
 SCENARIO("complex operator +=","[oper+=]"){
-    Complex complex1(2,-3), complex2(4,2), complex3(6,-1);
+    Complex complex1(2, 2), complex2(3, 3), complex3(5, 5);
     complex1 += complex2;
     REQUIRE((complex1 == complex3) == true);
 }
 
 SCENARIO("complex operator -=","[oper-=]"){
-    Complex complex1(2,-3), complex2(4,2), complex3(-2,-5);
+    Complex complex1(3, 3), complex2(2, 2), complex3(1, 1);
     complex1 -= complex2;
     REQUIRE((complex1 == complex3) == true);
 }
 
 SCENARIO("complex operator *=","[oper-*=]"){
-    Complex complex1(2,-3), complex2(4,2), complex3(14,-8);
+    Complex complex1(1, 2), complex2(3, 4), complex3(-5, 10);
     complex1 *= complex2;
     REQUIRE((complex1 == complex3) == true);
 }
 
 SCENARIO("complex operator /=","[oper/=]"){
-    Complex complex1(-23,2), complex2(4,2), complex3(-4.4,2.7);
+    Complex complex1(1, 2), complex2(3, 4), complex3(0.44, 0.08);
     complex1 /= complex2;
     REQUIRE((complex1 == complex3) == true);
 }
 
 SCENARIO("complex operator =","[oper=]"){
-    Complex complex1(2,-3), complex2(4,2);
+    Complex complex1(2, 2), complex2(3, 3);
     complex1 = complex2;
     REQUIRE((complex1 == complex2) == true);
 }
 
 SCENARIO("complex operator ==","[oper==]"){
-    Complex complex1(2,-3), complex2(2,-3);
+    Complex complex1(2, 2), complex2(2, 2);
 
     REQUIRE((complex1 == complex2) == true);
 }
