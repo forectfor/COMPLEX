@@ -1,6 +1,4 @@
-//
-// Created by levin on 24.04.18.
-//
+
 
 #ifndef LAB_6_COMPLEX_H
 #define LAB_6_COMPLEX_H
@@ -32,10 +30,10 @@ public:
     Complex operator/=(const Complex&);
     Complex operator=(const Complex&);
     bool operator==(const Complex&);
-//     template <class CharT, class Traits>
-//     friend basic_ostream<CharT, Traits>& operator <<(basic_ostream<CharT, Traits>&, const Complex&);
-//     template <class CharT, class Traits>
-//     friend basic_istream<CharT, Traits>& operator >> (basic_istream<CharT, Traits>&, Complex&);
+    template <class CharT, class Traits>
+    friend basic_ostream<CharT, Traits>& operator <<(basic_ostream<CharT, Traits>&, const Complex&);
+    template <class CharT, class Traits>
+    friend basic_istream<CharT, Traits>& operator >> (basic_istream<CharT, Traits>&, Complex&);
 };
 
-#endif //LAB_6_COMPLEX_H
+#endif 
