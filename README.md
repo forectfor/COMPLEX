@@ -1,2 +1,2 @@
-# complex_travis
-[![Build Status](https://travis-ci.org/Vampirchik147/complex_travis.svg?branch=master)](https://travis-ci.org/Vampirchik147)
+# complextr
+[![Build Status](https://travis-ci.org/Papich228/complextr.svg?branch=master)](https://travis-ci.org/Papich228)
